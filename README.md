@@ -7,4 +7,4 @@ https://github.com/SeleniumHQ/selenium/tree/master/javascript/node/selenium-webd
 
 USAGE
 =================
-There are some examples in `examples`, check that out.
+There are some examples in `~/helpers/examples` and `~/unity_tests`, check that out.
