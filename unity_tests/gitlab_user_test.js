@@ -12,10 +12,12 @@ const login_info = gitlab_user.login_enum();
 //Gitlab url
 const url = 'http://gitlab.com';
 
-
+// The test case consists of:
+// 1) Sing in;
+// 2) Sing out;
 module.exports.perform_test_case_1 = function()
 {
-//Sign in
+    //Sign in
     return browser.start(url).
     then(
     function(connection_sucessful){
@@ -31,8 +33,9 @@ module.exports.perform_test_case_1 = function()
     function(err){
         console.log("ERROR: " + err);
     }).
+    //Sign out
     then(
-    function(sucess){ //Sign out
+    function(sucess){
         return gitlab_user.sign_out(browser);
     },
     function(err){
