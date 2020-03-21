@@ -17,10 +17,13 @@ const max_wait_time = 20000;
 const delay = require('delay');
 
 // There used to be a logger attached to this project
+// and it would be nice to have one
 //const logger = require('../util/logger.js');
 
-//Set Firefox Profile: change the path to your own
-const options = new firefox.Options().setProfile('/path/to/.mozilla/firefox/your_profile');
+//Set Firefox Options (ex.: profile, headless, etc>)
+const options = new firefox.Options();
+// options.setProfile('/path/to/.mozilla/firefox/your_profile');
+// options.headless();
 
 //Helper variable
 let browser;
