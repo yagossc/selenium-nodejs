@@ -26,7 +26,15 @@ module.exports.perform_test_case = function()
             function(connection_error){
                 console.log("ERROR: ", connection_error);
             }
-        ).
+        ). //2) Go to Profile
+        then(
+            function(sucess){
+                return github_user.go_to_profile(browser)
+            },
+            function(err){
+                console.log("ERROR: Couldn't click on dropdown menu item", err);
+            }
+        ). // Stop for 3 seconds
         then(
             function(sucess){
                 return delay(3000)
