@@ -7,7 +7,6 @@ module.exports.login_enum = function()
             name : "Enter your user name",
             password : "Enter your password"
         },
-
     };
     return login_info;
 }
@@ -29,6 +28,20 @@ module.exports.sign_in = function(user, driver)
             },
             function(err){
                 console.log("ERROR: ", err);
+            }
+        );
+}
+
+module.exports.go_to_profile = function(driver)
+{
+    return driver.execute_script('document.getElementsByTagName("details")[1].setAttribute("open", "");').
+        then(
+            function(sucess){
+                return driver.click_on('xpath', '/html/body/div[1]/header/div[7]/details/details-menu/a[1]');
+
+            },
+            function(err){
+                console.log("ERROR: Couldn't click on dropdown menu", err);
             }
         );
 }
