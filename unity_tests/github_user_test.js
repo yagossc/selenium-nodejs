@@ -34,10 +34,18 @@ module.exports.perform_test_case = function()
             function(err){
                 console.log("ERROR: Couldn't click on dropdown menu item", err);
             }
-        ). // Stop for 3 seconds
+        ). // Stop for a second
         then(
             function(sucess){
-                return delay(3000)
+                return delay(1000)
+            },
+            function(err){
+                console.log("ERROR: ", err);
+            }
+        ). //3) Sign out
+        then(
+            function(sucess){
+                return github_user.sign_out(browser);
             },
             function(err){
                 console.log("ERROR: ", err);

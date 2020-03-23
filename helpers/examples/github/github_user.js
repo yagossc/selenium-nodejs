@@ -45,3 +45,17 @@ module.exports.go_to_profile = function(driver)
             }
         );
 }
+
+module.exports.sign_out = function(driver)
+{
+    return driver.execute_script('document.getElementsByTagName("details")[1].setAttribute("open", "");').
+        then(
+            function(sucess){
+                return driver.click_on('xpath', '/html/body/div[1]/header/div[7]/details/details-menu/form/button');
+
+            },
+            function(err){
+                console.log("ERROR: Couldn't click on dropdown menu", err);
+            }
+        );
+}
