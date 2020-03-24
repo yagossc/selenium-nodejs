@@ -1,0 +1,32 @@
+{
+  "name": "selenium-nodejs",
+  "version": "0.0.1",
+  "description": "A bundle of helpers to automate web routines/testing using selenium and nodejs.",
+  "main": "/helpers/browser.js",
+  "dependencies": {
+    "delay": "^4.3.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagossc/selenium-nodejs.git"
+  },
+  "keywords": [
+    "selenium",
+    "nodejs",
+    "node",
+    "testing",
+    "engine",
+    "automation"
+  ],
+  "author": "yagossc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yagossc/selenium-nodejs/issues"
+  },
+  "homepage": "https://github.com/yagossc/selenium-nodejs#readme"
+}
